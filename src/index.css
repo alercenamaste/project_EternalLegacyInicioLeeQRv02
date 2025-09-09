@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark: #2B2E35;
+  --color-gray: #4E4F59;
+  --color-sage: #8D9993;
+  --color-orange: #FF7B0F;
+}
+
+body {
+  @apply bg-[#2B2E35] text-white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.message-drawer {
+  transform: translateY(calc(100% - 2rem));
+  transition: transform 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.message-drawer.expanded {
+  transform: translateY(0);
+}
